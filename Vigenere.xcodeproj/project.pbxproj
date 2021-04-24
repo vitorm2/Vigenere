@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF7E6732262907EB00372203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E6731262907EB00372203 /* AppDelegate.swift */; };
+		CF7E6734262907EB00372203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E6733262907EB00372203 /* SceneDelegate.swift */; };
+		CF7E6736262907EB00372203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E6735262907EB00372203 /* ViewController.swift */; };
+		CF7E6739262907EB00372203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7E6737262907EB00372203 /* Main.storyboard */; };
+		CF7E673B262907ED00372203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7E673A262907ED00372203 /* Assets.xcassets */; };
+		CF7E673E262907ED00372203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7E673C262907ED00372203 /* LaunchScreen.storyboard */; };
+		CF7E674D2629130B00372203 /* VigenereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7E674C2629130B00372203 /* VigenereTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF7E674F2629130B00372203 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF7E6726262907EB00372203 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF7E672D262907EB00372203;
+			remoteInfo = Vigenere;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF7E672E262907EB00372203 /* Vigenere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vigenere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF7E6731262907EB00372203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF7E6733262907EB00372203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF7E6735262907EB00372203 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF7E6738262907EB00372203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF7E673A262907ED00372203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF7E673D262907ED00372203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF7E673F262907ED00372203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF7E674A2629130B00372203 /* VigenereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VigenereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF7E674C2629130B00372203 /* VigenereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigenereTests.swift; sourceTree = "<group>"; };
+		CF7E674E2629130B00372203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF7E672B262907EB00372203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF7E67472629130B00372203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF7E6725262907EB00372203 = {
+			isa = PBXGroup;
+			children = (
+				CF7E6730262907EB00372203 /* Vigenere */,
+				CF7E674B2629130B00372203 /* VigenereTests */,
+				CF7E672F262907EB00372203 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF7E672F262907EB00372203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF7E672E262907EB00372203 /* Vigenere.app */,
+				CF7E674A2629130B00372203 /* VigenereTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF7E6730262907EB00372203 /* Vigenere */ = {
+			isa = PBXGroup;
+			children = (
+				CF7E6731262907EB00372203 /* AppDelegate.swift */,
+				CF7E6733262907EB00372203 /* SceneDelegate.swift */,
+				CF7E6735262907EB00372203 /* ViewController.swift */,
+				CF7E6737262907EB00372203 /* Main.storyboard */,
+				CF7E673A262907ED00372203 /* Assets.xcassets */,
+				CF7E673C262907ED00372203 /* LaunchScreen.storyboard */,
+				CF7E673F262907ED00372203 /* Info.plist */,
+			);
+			path = Vigenere;
+			sourceTree = "<group>";
+		};
+		CF7E674B2629130B00372203 /* VigenereTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF7E674C2629130B00372203 /* VigenereTests.swift */,
+				CF7E674E2629130B00372203 /* Info.plist */,
+			);
+			path = VigenereTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF7E672D262907EB00372203 /* Vigenere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF7E6742262907ED00372203 /* Build configuration list for PBXNativeTarget "Vigenere" */;
+			buildPhases = (
+				CF7E672A262907EB00372203 /* Sources */,
+				CF7E672B262907EB00372203 /* Frameworks */,
+				CF7E672C262907EB00372203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vigenere;
+			productName = Vigenere;
+			productReference = CF7E672E262907EB00372203 /* Vigenere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF7E67492629130B00372203 /* VigenereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF7E67512629130B00372203 /* Build configuration list for PBXNativeTarget "VigenereTests" */;
+			buildPhases = (
+				CF7E67462629130B00372203 /* Sources */,
+				CF7E67472629130B00372203 /* Frameworks */,
+				CF7E67482629130B00372203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF7E67502629130B00372203 /* PBXTargetDependency */,
+			);
+			name = VigenereTests;
+			productName = VigenereTests;
+			productReference = CF7E674A2629130B00372203 /* VigenereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF7E6726262907EB00372203 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CF7E672D262907EB00372203 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CF7E67492629130B00372203 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF7E672D262907EB00372203;
+					};
+				};
+			};
+			buildConfigurationList = CF7E6729262907EB00372203 /* Build configuration list for PBXProject "Vigenere" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF7E6725262907EB00372203;
+			productRefGroup = CF7E672F262907EB00372203 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF7E672D262907EB00372203 /* Vigenere */,
+				CF7E67492629130B00372203 /* VigenereTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF7E672C262907EB00372203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF7E673E262907ED00372203 /* LaunchScreen.storyboard in Resources */,
+				CF7E673B262907ED00372203 /* Assets.xcassets in Resources */,
+				CF7E6739262907EB00372203 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF7E67482629130B00372203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF7E672A262907EB00372203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF7E6736262907EB00372203 /* ViewController.swift in Sources */,
+				CF7E6732262907EB00372203 /* AppDelegate.swift in Sources */,
+				CF7E6734262907EB00372203 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF7E67462629130B00372203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF7E674D2629130B00372203 /* VigenereTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF7E67502629130B00372203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF7E672D262907EB00372203 /* Vigenere */;
+			targetProxy = CF7E674F2629130B00372203 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF7E6737262907EB00372203 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF7E6738262907EB00372203 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF7E673C262907ED00372203 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF7E673D262907ED00372203 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF7E6740262907ED00372203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF7E6741262907ED00372203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF7E6743262907ED00372203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 572YF9FD67;
+				INFOPLIST_FILE = Vigenere/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitordemenighi.Vigenere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF7E6744262907ED00372203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 572YF9FD67;
+				INFOPLIST_FILE = Vigenere/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitordemenighi.Vigenere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF7E67522629130B00372203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 572YF9FD67;
+				INFOPLIST_FILE = VigenereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitordemenighi.VigenereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vigenere.app/Vigenere";
+			};
+			name = Debug;
+		};
+		CF7E67532629130B00372203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 572YF9FD67;
+				INFOPLIST_FILE = VigenereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitordemenighi.VigenereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vigenere.app/Vigenere";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF7E6729262907EB00372203 /* Build configuration list for PBXProject "Vigenere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7E6740262907ED00372203 /* Debug */,
+				CF7E6741262907ED00372203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF7E6742262907ED00372203 /* Build configuration list for PBXNativeTarget "Vigenere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7E6743262907ED00372203 /* Debug */,
+				CF7E6744262907ED00372203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF7E67512629130B00372203 /* Build configuration list for PBXNativeTarget "VigenereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7E67522629130B00372203 /* Debug */,
+				CF7E67532629130B00372203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF7E6726262907EB00372203 /* Project object */;
+}
