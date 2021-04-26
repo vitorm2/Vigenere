@@ -12,15 +12,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     let main: Main = Main()
+    var mainText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func touchedButton(_ sender: Any) {
-        let keySize = main.discoverKeySize(originalText: textView.text)
-        let result = main.discoveryKeyValue(keySize: keySize, text: textView.text)
+        let path = "/Users/vitordemenighi/Desktop/TrabVigenere/Sources/texto1.txt"
+        var mainText: String = ""
         
+        do {
+            let url = URL(fileURLWithPath: path)
+            mainText = try String(contentsOf: url, encoding: String.Encoding.utf8)
+            
+        } catch {
+            print("Erro ao ler o arquivo")
+        }
+        
+        
+//        mainText = textView.text
+        let keySize = main.discoverKeySize(originalText: mainText)
+        let keyValue = main.discoveryKeyValue(keySize: keySize, text: mainText)
+        let result = main.decipher(key: keyValue, originalText: mainText)
         print(result)
     }
 }
@@ -45,7 +59,7 @@ class Main {
                 coincidenceIndexTotal += coincidenceIndex
             }
             
-            /// Pega a média do ndice de coincidencia
+            /// Pega a média do indice de coincidencia
             let coincidenceIndexAverage = coincidenceIndexTotal/Double(keySize)
             
             /// Verifica se o resultado está de acordo com o valor aceitável para lingua portuguesa
@@ -78,41 +92,118 @@ class Main {
             keyCandidate_E += getKeyCandidate(with: E_value, mostFrenquentlyLetter.0)
         }
 
-        return ""
+        /// Encontra as possiveis combinações de letras das duas chaves candidatas
+        let keysCombinations = getCombinations(candidateOne: keyCandidate_A, candidateTwo: keyCandidate_E)
+        
+        /// Entre as chaves cadidatas encontra a chave correta
+        let correctKey = foundCorrectKey(combinations: keysCombinations, originalText: text)
+        
+        return correctKey
     }
     
     // MARK: - Common Functions
     
     /// Retornar as combinações possiveis entre as duas chaves. Alterna entre os caracteres das posições (exemplo: troca a 1 letra da chave 1 pela 1 letra da chave 2 e assim por diante)
-    #warning("IMPLEMENTAR")
     func getCombinations(candidateOne: String, candidateTwo: String) -> [String] {
-        let keySize = candidateOne.count
-        
+        var result: [String] = []
+        let keySize = max(candidateOne.count, candidateTwo.count)
         let size = Int(pow(Double(2), Double(keySize)))
         
-        for _ in 0..<size {}
+        for i in 0..<size {
+            var binary = String(i, radix: 2)
+            
+            while binary.count < keySize {
+                let value = "0" + binary
+                binary = value
+            }
+            
+            var newKey = ""
+            for j in 0..<binary.count {
+                if binary[j] == "0" {
+                    newKey += candidateOne[j]
+                } else {
+                    newKey += candidateTwo[j]
+                }
+            }
+            
+            result.append(newKey)
+        }
         
-        return []
+        return result
+    }
+    
+    /// Encontra  a chave correta decifrando o text e testando a frequencia das letras menos comuns
+    func foundCorrectKey(combinations: [String], originalText: String) -> String {
+        var previousScore = Int.max
+        var choosenKey = ""
+        let shortedText = reduceTextLength(originalText: originalText, textCharactersLimitNumber: 1000)
         
-//        for (int i = 0; i < Math.pow(2, key_size); i++) {
-//            String binary = Integer.toBinaryString(i);
-//            while (binary.length() < key_size) {
-//                String a = "0";
-//                a += binary;
-//                binary = a;
-//            }
-//
-//            String new_key = "";
-//            for (int j = 0; j < binary.length(); j++) {
-//                if (binary.substring(j, j + 1).equals("0")) {
-//                    new_key += key.substring(j, j + 1);
-//
-//                } else {
-//                    new_key += key2.substring(j, j + 1);
-//                }
-//            }
-//            keys.add(new_key);
-//        }
+        for candidate in combinations {
+            let resultText = decipher(key: candidate, originalText: shortedText)
+            let score = getLessFrequencyPortugueseLetters(text: resultText)
+        
+            if  score < previousScore  {
+                choosenKey = candidate
+                previousScore = score
+            }
+        }
+        
+        return choosenKey
+    }
+    
+    /// Reduz o comprimento do texto para melhorar a performace do algoritmo
+    func reduceTextLength(originalText: String, textCharactersLimitNumber: Int) -> String {
+        
+        if originalText.count > textCharactersLimitNumber {
+            let end = originalText.index(originalText.startIndex, offsetBy: textCharactersLimitNumber)
+            return String(originalText[..<end])
+        }
+        return originalText
+    }
+    
+    
+    /// Decifra o texto de acordo com a chave passada por parametro
+    func decipher(key: String, originalText: String) -> String {
+        var keyPosition = -1
+        var resultText = ""
+        
+        for i in 0..<originalText.count {
+            keyPosition += 1
+            
+            if keyPosition > (key.count - 1) {
+                keyPosition = 0;
+            }
+            
+            let letter = originalText[i]
+            let keyLetter = key[keyPosition]
+            let lcif = alphabetValues[letter]!
+            let lcha = alphabetValues[keyLetter]!
+            var lmensagem = lcif - lcha
+            
+            if lmensagem < 0 {
+                lmensagem = 26 + lmensagem
+            }
+            
+            let messageLetter = getLetter(with: lmensagem)
+            resultText += messageLetter
+        }
+        
+        return resultText
+    }
+    
+    /// Testa a frequência das letras menos comuns da lingua portuguesa no texto passado por parametro
+    func getLessFrequencyPortugueseLetters(text: String) -> Int {
+        var kScore = 0
+        var wScore = 0
+        var yScore = 0
+        
+        for letter in text {
+            kScore += letter == "k" ? 1 : 0
+            wScore += letter == "w" ? 1 : 0
+            yScore += letter == "y" ? 1 : 0
+        }
+        
+        return kScore + wScore + yScore
     }
     
     /// Encontra a chave candidata de acordo com o valor da letra refência escolhida (A ou E) e a a letra mais frequente da coluna
@@ -122,7 +213,7 @@ class Main {
         return getLetter(with: resultValueLetter)
     }
     
-    /// Retorna a letra de maior frequência no texto
+    /// Retorna a letra de maior frequência nowwtexto
     func getLetter(lettersFrequency: [String: Int]) -> (String, Int) {
         var result = ("", 0)
         for letter in lettersFrequency {
